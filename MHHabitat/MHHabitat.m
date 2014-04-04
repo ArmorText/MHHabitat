@@ -51,7 +51,9 @@ static MHMobileProvisionType _mobileProvisionType;
 {
     MHMobileProvisionType appType = [self mobileProvisionType];
     
-    return appType == MHMobileProvisionTypeAppStore || appType == MHMobileProvisionTypeEnterprise || appType == MHMobileProvisionTypeAdHoc;
+    return appType == MHMobileProvisionTypeAppStore || appType == MHMobileProvisionTypeEnterprise;
+    // TODO (AR): figure out what we really should do in case of ad hoc 
+    // return appType == MHMobileProvisionTypeAppStore || appType == MHMobileProvisionTypeEnterprise || appType == MHMobileProvisionTypeAdHoc;
 }
 
 + (MHMobileProvisionType)parseMobileProvisionType
